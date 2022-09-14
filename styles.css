@@ -13,7 +13,7 @@ body {
 
 header {
     height: 90vh;
-    background: url(./img/header/banner.png);
+    background: url(./img/header/banner.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -26,17 +26,18 @@ header {
 
 .navbar {
     width: 100%;
-    background-color: #303033c6;
+    background-color: #3c3c3eb3;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 0;
     position: fixed;
     z-index: 100;
-    transition: padding .3s linear;
+    transition: background-color .3s linear, padding .3s linear;
 }
 
 .navbar.scroll {
+    background-color: #3c3c3ef1;
     border-bottom: 1px solid rgb(143, 132, 132);
     padding: 25px 0;
 }
@@ -118,7 +119,8 @@ header {
 
 .banner {
     width: 80%;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(./img/header/banner2.png);
+    height: 60vh;
+    background: url(./img/header/banner2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -126,9 +128,9 @@ header {
     border-radius: 30px;
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 58%;
     transform: translate(-50%, -50%);
-    padding: 60px 50px;
+    /* padding: 60px 50px; */
 }
 
 .banner h4 {
@@ -155,7 +157,7 @@ header {
 /* Start Feature Section  */
 
 section.feature {
-    background: url(./img/header/banner.png);
+    background: url(./img/header/banner.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -163,12 +165,11 @@ section.feature {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 40px 0;
+    padding: 40px 0 60px;
 }
 
 .feature-group {
     width: 90%;
-    /* background-color: red; */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -177,14 +178,30 @@ section.feature {
 .feature-group .feature-card {
     width: 20%;
     color: #fff;
-    /* background-color: green; */
+    display: grid;
+    place-items: center;
+}
+
+.feature-card .feature-img-group {
+    width: 75%;
+    height: 150px;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.feature-card .feature-img-group img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.feature-body {
     text-align: center;
 }
 
 .feature-body p:first-child {
     font-size: 20px;
     font-weight: bold;
-    padding: 10px 0;
+    padding: 15px 0;
 }
 
 .feature-body p:last-child {
@@ -244,10 +261,11 @@ section.feature {
     right: -15%;
     top: 50%;
     transform: translate(0, -50%);
-    z-index: 1;
+    z-index: -1;
 }
 
 .subtitle-img-group img:last-of-type.scroll {
+    z-index: 1;
     animation: imgani 2s linear;
 }
 
@@ -321,6 +339,26 @@ section.feature {
     width: 40%;
 }
 
+.prodcut-card .prodcut-description.product-1.scroll {
+    animation: leftani 1s linear;
+    animation-fill-mode: backwards;
+}
+
+.prodcut-card .product-img-group.img-2.scroll {
+    animation: leftani 1s linear;
+}
+
+@keyframes leftani {
+    from {
+        opacity: 0;
+        transform: translate(-12%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
 .prodcut-description p:first-child {
     font-size: 25px;
     font-weight: 500;
@@ -350,6 +388,26 @@ section.feature {
     width: 40%;
 }
 
+.prodcut-card .product-img-group.img-1.scroll {
+    animation: rightani 1s linear;
+    animation-fill-mode: forwards;
+}
+
+.prodcut-card .prodcut-description.product-2.scroll {
+    animation: rightani 1s linear;
+}
+
+@keyframes rightani {
+    from {
+        opacity: 0;
+        transform: translate(12%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
 .product-img-group img {
     width: 100%;
     object-fit: cover;
@@ -373,7 +431,7 @@ section.feature {
 
 .partner-container {
     width: 80%;
-    padding: 50px 0;
+    padding: 100px 0;
     text-align: center;
 }
 
@@ -422,11 +480,16 @@ section.feature {
 }
 
 .client-container .client-img-group {
-    width: 60%;
+    width: 70%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+}
+
+.client-img-group img {
+    width: 15%;
+    margin-right: 20px;
 }
 
 
