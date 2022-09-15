@@ -39,7 +39,7 @@ header {
 .navbar.scroll {
     background-color: #3c3c3ef1;
     border-bottom: 1px solid rgb(143, 132, 132);
-    padding: 25px 0;
+    padding: 20px 0;
 }
 
 .navbar-brand {
@@ -259,25 +259,7 @@ section.feature {
 .subtitle-img-group img:last-of-type {
     position: absolute;
     right: -15%;
-    top: 50%;
-    transform: translate(0, -50%);
-    z-index: -1;
-}
-
-.subtitle-img-group img:last-of-type.scroll {
-    z-index: 1;
-    animation: imgani 2s linear;
-}
-
-@keyframes imgani {
-    from {
-        opacity: 0;
-        transform: translate(40%, -50%);
-    }
-    to {
-        opacity: 1;
-        transform: translate(0, -50%);
-    }
+    top: 15%;
 }
 
 .prodcut-subtitle .descirpt-group {
@@ -286,22 +268,6 @@ section.feature {
     margin-left: -50%;
     margin-top: -5%;
     z-index: 3;
-    transition: margin-left .3s linear;
-}
-
-.prodcut-subtitle .descirpt-group.scroll {
-    animation: desani 2s linear;
-}
-
-@keyframes desani {
-    from {
-        opacity: 0;
-        transform: translate(-80%);
-    }
-    to {
-        opacity: 1;
-        transform: translate(0);
-    }
 }
 
 .prodcut-subtitle .descirpt-group p:first-child {
@@ -324,7 +290,6 @@ section.feature {
 /* start product body */
 
 .product-card-group {
-    /* background-color: red; */
     color: #fff;
     padding: 20px 0;
 }
@@ -337,26 +302,6 @@ section.feature {
 
 .prodcut-card .prodcut-description {
     width: 40%;
-}
-
-.prodcut-card .prodcut-description.product-1.scroll {
-    animation: leftani 1s linear;
-    animation-fill-mode: backwards;
-}
-
-.prodcut-card .product-img-group.img-2.scroll {
-    animation: leftani 1s linear;
-}
-
-@keyframes leftani {
-    from {
-        opacity: 0;
-        transform: translate(-12%);
-    }
-    to {
-        opacity: 1;
-        transform: translate(0);
-    }
 }
 
 .prodcut-description p:first-child {
@@ -385,27 +330,7 @@ section.feature {
 }
 
 .prodcut-card .product-img-group {
-    width: 40%;
-}
-
-.prodcut-card .product-img-group.img-1.scroll {
-    animation: rightani 1s linear;
-    animation-fill-mode: forwards;
-}
-
-.prodcut-card .prodcut-description.product-2.scroll {
-    animation: rightani 1s linear;
-}
-
-@keyframes rightani {
-    from {
-        opacity: 0;
-        transform: translate(12%);
-    }
-    to {
-        opacity: 1;
-        transform: translate(0);
-    }
+    width: 30%;
 }
 
 .product-img-group img {
@@ -507,10 +432,10 @@ footer {
 footer .container {
     width: 90%;
     color: #fff;
-    padding-bottom: 15px;
+    padding: 20px 0;
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
     position: relative;
 }
 
@@ -527,6 +452,10 @@ footer .container::after {
 footer .container .footer-group {
     width: 20%;
     padding: 20px;
+}
+
+footer .container .footer-group:first-child {
+    width: 30%;
 }
 
 .footer-group .title {
@@ -546,12 +475,19 @@ footer .container .footer-group {
 }
 
 .footer-link .link-item {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .link-item a {
     color: #fff;
     text-decoration: none;
+    transition: all .2s;
+}
+
+.link-item a:hover {
+    color: #8858b9;
+    border-bottom: 1px solid #8858b9;
+    letter-spacing: 1px;
 }
 
 .footer-link-group {
