@@ -388,16 +388,19 @@ section.feature {
 
 /* Start Client Section  */
 
+.client {
+    padding: 50px 0;
+}
+
 .client-container {
     display: grid;
     place-items: center;
-    padding: 20px 0;
 }
 
 .client-container .title {
     font-size: 62px;
     font-weight: bold;
-    margin: 30px 0;
+    margin-bottom: 15px;
 }
 
 .client-container .title span {
